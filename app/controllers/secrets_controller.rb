@@ -2,7 +2,10 @@ class SecretsController < ApplicationController
   before_action :require_login
 
   def show
-    current_user
+    if current_user
+      render :show
+    else
+      render :new
   end
 
 
