@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'application#hello'
 
-  resources :sessions
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  post '/logout' => 'sessions#destroy'
 
-  resources :secrets
+  get '/secret' => 'secrets#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
