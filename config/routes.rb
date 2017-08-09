@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'secrets/show' => 'secrets#show'
 
   get 'sessions/new' => 'sessions#new'
+
+  resources :sessions
+
+  resources :secrets
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
