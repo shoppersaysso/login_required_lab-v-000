@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
     session[:name]
   end
 
+  def require_login
+  end
+
 end
