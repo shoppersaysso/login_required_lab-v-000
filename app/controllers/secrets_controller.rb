@@ -6,6 +6,7 @@ class SecretsController < ApplicationController
       render :show
     else
       render :new
+    end
   end
 
 
