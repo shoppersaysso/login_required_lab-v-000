@@ -5,7 +5,7 @@ class SecretsController < ApplicationController
     if current_user
       render :show
     else
-      redirect_to 'sessions/new'
+      redirect_to controller: 'sessions', action: 'new'
     end
   end
 
